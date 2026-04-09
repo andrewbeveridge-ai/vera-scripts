@@ -1,8 +1,8 @@
-// ANOTHER REALM — Email Waitlist Collector v2.1
-// CORS-safe: GET-based submission from browser
+// ANOTHER REALM — Email Waitlist Collector v2.2
+// Saves to: Portfolio Command Center → Marketing & Social Media → Lead Tracking
 
 const SPREADSHEET_NAME = 'Another Realm — Email Waitlist';
-const FOLDER_ID = '1AltXmxipNGZN5qukmslZI4xXpz1M7mlH'; // ARAI → Marketing & Social Media
+const FOLDER_ID = '10qt8r1fCIInl1VJOSX6yx2e_T3En7wqb'; // Lead Tracking folder
 
 function getOrCreateSheet(ss, tabName) {
   let sheet = ss.getSheetByName(tabName);
@@ -62,7 +62,7 @@ function doGet(e) {
       (e.parameter.source||'unknown').trim()
     ))).setMimeType(ContentService.MimeType.JSON);
   }
-  return ContentService.createTextOutput(JSON.stringify({status:'alive',service:'Another Realm Email Collector v2.1'}))
+  return ContentService.createTextOutput(JSON.stringify({status:'alive',service:'Another Realm Email Collector v2.2'}))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
